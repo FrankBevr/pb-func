@@ -13,7 +13,6 @@ async function main() {
   fs.writeFileSync("no-bg.png", Buffer.from(rbgResultData));
 }
 
-
 async function removeBg(imageURL) {
   const formData = new FormData();
   formData.append("size", "auto");
