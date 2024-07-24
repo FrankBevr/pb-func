@@ -9,11 +9,11 @@ const openai = new OpenAI({ apiKey: "sk-None-oBBwp2KXurrQSZEaqDGST3BlbkFJ0o9LvP9
 async function generateTransparentSticker(name) {
   const image = await openai.images.generate({
     prompt: `
-A whimsy cartoon ${name} sticker illustration isolated on a solid black background. 
-The ${name} in the sticker is depicted in a watercolor style with dark and vibrant colors. 
-Add gothic magic elements to the frog such as dark flowers, black feathers, amethyst crystals, and withered leaves. 
+A cute cartoon ${name} sticker illustration isolated on solid pastel green. 
+The ${name} in the sticker is depicted in a watercolor style with vibrant colors. 
+Add boho magic elements to the ${name} such as flowers, feathers, crystals, and leaves. 
 Ensure that the ${name} is centered and fits within the sticker's borders. 
-The sticker should have a white border and a clipart-like appearance, embodying a mystical and enchanting vibe.
+The sticker should have a white background and a clipart-like appearance.
 ` })
   console.log(image.data[0].url);
   const rbgResultData = await removeBg(image.data[0].url);
